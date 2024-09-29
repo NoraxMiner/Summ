@@ -1,19 +1,18 @@
 input_data = open('input.txt', 'r') 
 
-X = input_data.read() 
-
+n = input_data.read()  
 #--------------------------------------------------------------------
-a = 1
-a = int(a)
-X = int(X)
-n = X
-n = int(X)
-S = (float((a + X)/2)*n)
-
-
+Sum = 0
+n = int(n)
+if n > 0:
+    for i in range(1, n + 1):
+        Sum += i
+else:
+    for i in range(n, 2):
+        Sum += i
 #--------------------------------------------------------------------
 output_data = open('output.txt', 'w') # Открываем для записи (литера 'w') файл и кладем его в переменную
-output_data.write (str(int(S)))
+output_data.write (str(Sum))
 
 # ВАЖНО!!! 
 # не забываем закрывать открытые ранее файлы!
